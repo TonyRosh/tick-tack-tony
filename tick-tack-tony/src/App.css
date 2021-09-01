@@ -1,0 +1,233 @@
+.App {
+  text-align: center;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(115, 189, 140);
+    font: 30px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    padding-bottom: 20px;
+    color:rgba(100, 50, 255, .8);
+    color:#212121;
+     /* Font options */
+    text-shadow: 2px 2px 4px #000000;
+    font-size:50px;
+  
+   /* Chrome, Safari, Opera */
+    -webkit-animation: rainbows 30s infinite; 
+  
+  /* Internet Explorer */
+    -ms-animation: rainbows 30s infinite;
+  
+  /* Standar Syntax */
+    animation: rainbows 30s infinite;
+  }
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+
+  button {
+    background-color: rgb(43, 255, 0);
+    box-shadow: 0 5px 0 rgb(233, 142, 7);
+    color: #2c2c2c ;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  button:active {
+    box-shadow: inset;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    border: 5px double #da9920;
+    /* float: left; */
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 75px;
+    height: 75px;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    width: 75px;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 5s ease infinite;
+-z-animation: rainbow 5s ease infinite;
+-o-animation: rainbow 5s ease infinite;
+  animation: rainbow 5s ease infinite;
+}
+
+.square:active {
+    border: 5.5px solid #da9920;
+    box-shadow: 10px 10px 20px 2.5px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.375);
+}
+
+
+  @-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    33%{background-position:85% 10%}
+    66%{background-position:100% 25%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    33%{background-position:85% 10%}
+    66%{background-position:100% 25%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    33%{background-position:85% 10%}
+    66%{background-position:100% 25%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    33%{background-position:85% 10%}
+    66%{background-position:100% 25%}
+    100%{background-position:0% 82%}
+}
+  
+  .square:focus {
+    outline: none;
+    transform: rotate(360deg);
+    transition: 1.5s;
+    background: linear-gradient(124deg, #ffffff, #d6d6d6, #b4b4b4, #929292, #555555, #424242, #2c2c2c, #1a1a1a, #000000);
+background-size: 1800% 1800%;
+box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.375);
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  
+  .game-info {
+    background-color:#1eb1a9;
+    padding:10px;
+    border-radius:15px;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+  }
+
+.next-player {
+    color:rgba(100, 50, 255, .8);
+    font-family: 'Pacifico', cursive;
+    color:#212121;
+     /* Font options */
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px #000000;
+    font-size:40px;
+  
+   /* Chrome, Safari, Opera */
+    -webkit-animation: rainbows 15s infinite; 
+  
+  /* Internet Explorer */
+    -ms-animation: rainbows 15s infinite;
+  
+  /* Standar Syntax */
+    animation: rainbows 15s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbows{
+    0%{color: orange;}	
+    10%{color: purple;}	
+      20%{color: red;}
+    30%{color: CadetBlue;}
+      40%{color: yellow;}
+    50%{color: coral;}
+      60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+      100%{color: orange;}
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes rainbows{
+     0%{color: orange;}	
+    10%{color: purple;}	
+      20%{color: red;}
+    30%{color: CadetBlue;}
+      40%{color: yellow;}
+    50%{color: coral;}
+      60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+      100%{color: orange;}
+  }
+  
+  /* Standar Syntax */
+  @keyframes rainbows{
+      0%{color: orange;}	
+    10%{color: purple;}	
+      20%{color: red;}
+    30%{color: CadetBlue;}
+      40%{color: yellow;}
+    50%{color: coral;}
+      60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+      100%{color: orange;}
+  }
+
+  @media(max-width: 375px) {
+
+    .game {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-board {
+      margin-bottom: 25\px;
+    }
+
+  }
